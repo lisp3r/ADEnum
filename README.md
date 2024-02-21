@@ -1,4 +1,4 @@
-# ADEnum
+# ADEnum.ps1
 
 Collection of PowerShell functions for AD enumeration.
 
@@ -51,4 +51,24 @@ PS > $(LDAPSearch-Group "Sales Department").Properties.member
 CN=Development Department,DC=corp,DC=com
 CN=pete,CN=Users,DC=corp,DC=com
 CN=stephanie,CN=Users,DC=corp,DC=com
+```
+
+# Spray-Passwords.ps1
+
+Source: https://web.archive.org/web/20220225190046/https://github.com/ZilentJack/Spray-Passwords/blob/master/Spray-Passwords.ps1
+
+Low and slow password spraying attack against AD users.
+
+## Usage
+
+### Spray one passwords among domain users include admin
+
+```powershell
+.\Spray-Passwords.ps1 -Pass Nexus123! -Admin
+```
+
+### Use wordlist
+
+```powershell
+.\Spray-Passwords.ps1 -File paswords.txt -Admin
 ```
